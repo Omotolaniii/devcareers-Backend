@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>REDACTR</title>
+    <link href="index.css" rel="stylesheet" type="text/css">
+    <script src="redact.js"></script>
+</head>
+
+<body class="Homepage">
+    <div class="container">
+        <h2>REDACTR</h2>
+        <p>
+        <h4>Scamble some words from a body of text content</h4>
+        </p>
+        <form id="redactForm">
+            <label for="Text">Text:</label>
+            <input type="text" id="originalText" required>
+
+            <label for="Text">Hide:</label>
+            <input type="word" id="wordsToScramble" required>
+
+            <button id="Redact">REDACT</button>
+
+            <label for="Text">Redacted:</label>
+            <input type="text" id="replacement" required>
+        </form>
+    </div>
+    <script>
+        setTimeout(function () {
+            const textarea = document.getElementById("originalText");
+            textarea.focus();
+            textarea.setSelectionRange(0, 0);
+        }, 0);
+    </script>
+</body>
+
+</html>
